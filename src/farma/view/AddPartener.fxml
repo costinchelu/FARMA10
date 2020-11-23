@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.AddPartenerController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="240.0" layoutY="109.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="94.0" prefWidth="800.0" styleClass="titleHBox">
+               <children>
+                  <Label fx:id="headerLB" styleClass="titleLabel" text="Adauga partener">
+                     <HBox.margin>
+                        <Insets left="80.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <GridPane hgap="10.0" vgap="20.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="255.0" minWidth="10.0" prefWidth="174.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="374.0" minWidth="10.0" prefWidth="346.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <VBox.margin>
+                  <Insets left="40.0" right="40.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label styleClass="normalLabel" text="Nume partener" />
+                  <Label styleClass="normalLabel" text="Adresa" GridPane.rowIndex="1" />
+                  <Label styleClass="normalLabel" text="Telefon" GridPane.rowIndex="2" />
+                  <Label styleClass="normalLabel" text="Email" GridPane.rowIndex="3" />
+                  <Label styleClass="normalLabel" text="CUI" GridPane.rowIndex="4" />
+                  <Label styleClass="normalLabel" text="IBAN" GridPane.rowIndex="5" />
+                  <TextField fx:id="numePartTF" GridPane.columnIndex="1" />
+                  <TextField fx:id="adresaTF" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="telefonTF" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="emailTF" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="cuiTF" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="ibanTF" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <HBox>
+               <children>
+                  <Label fx:id="msgLB" styleClass="msgLabel" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="106.0" prefWidth="760.0">
+               <children>
+                  <Button fx:id="okBTN" maxHeight="60.0" maxWidth="140.0" minHeight="60.0" minWidth="140.0" mnemonicParsing="false" onAction="#butonSalveazaNouPartener" prefHeight="60.0" prefWidth="140.0" styleClass="success" text="Adauga">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button maxWidth="140.0" minHeight="60.0" minWidth="140.0" mnemonicParsing="false" onAction="#butonBackToTabelParteneri" prefHeight="60.0" prefWidth="140.0" styleClass="primary" text="Anuleaza">
+                     <HBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

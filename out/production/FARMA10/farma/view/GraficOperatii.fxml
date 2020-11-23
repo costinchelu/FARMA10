@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.GraficOperatiiController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="196.0" layoutY="29.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="131.0" prefWidth="1400.0" styleClass="titleHBox">
+               <children>
+                  <Label styleClass="titleLabel" text="Raport valori operatii de intrare-iesire">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="644.0" prefWidth="1340.0">
+               <VBox.margin>
+                  <Insets left="40.0" right="20.0" top="40.0" />
+               </VBox.margin>
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="520.0" prefWidth="458.0">
+                     <children>
+                        <Label text="SELECTIE PERIOADA:">
+                           <VBox.margin>
+                              <Insets bottom="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="selectieCB" prefHeight="37.0" prefWidth="337.0" />
+                        <Label fx:id="totalIntrariLB" text="Total intrari: " textFill="#5100ff">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="40.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="totalIesiriLB" text="Total iesiri:" textFill="#ff0492">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <BarChart fx:id="grafic" prefHeight="644.0" prefWidth="853.0">
+                    <xAxis>
+                      <CategoryAxis fx:id="graficAxaX" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="graficAxaY" side="LEFT" />
+                    </yAxis>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </BarChart>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button maxHeight="60.0" maxWidth="140.0" minHeight="60.0" minWidth="140.0" mnemonicParsing="false" onAction="#butonBackToFacturi" prefHeight="60.0" prefWidth="140.0" styleClass="primary" text="Inapoi">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children></VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.TabelNomProduseController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="123.0" prefWidth="1400.0" styleClass="titleHBox">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="titluLB" styleClass="titleLabel" text="Nomenclatorul de produse">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="tabelTBV" onMouseClicked="#produsSelectat" prefHeight="659.0" prefWidth="1360.0">
+               <placeholder>
+                  <Label text="Nomenclatorul de produse in stoc" />
+               </placeholder>
+               <columns>
+                  <TableColumn fx:id="denProdTCL" prefWidth="338.0" text="Denumire produs" />
+                  <TableColumn fx:id="denDCITBC" prefWidth="224.0" text="DCI" />
+                  <TableColumn fx:id="concentratieTBC" prefWidth="117.0" text="Concentratie" />
+                  <TableColumn fx:id="producatorTBC" prefWidth="290.0" text="Producator" />
+                  <TableColumn fx:id="tvaTBCL" prefWidth="52.0" text="TVA" />
+                  <TableColumn fx:id="adaosTBCL" prefWidth="85.0" text="Adaos" />
+                  <TableColumn fx:id="pretTBCL" prefWidth="109.0" text="Pret impus" />
+                  <TableColumn fx:id="codBareTBCL" prefWidth="173.0" text="Cod de bare" />
+               </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="30.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="25.0" prefWidth="984.0">
+               <children>
+                  <Label fx:id="msgLB" styleClass="msgLabel" text="Label">
+                     <HBox.margin>
+                        <Insets left="20.0" right="40.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets left="40.0" right="20.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="89.0" prefWidth="984.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="stergeBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonStergeProdusDinNomenclator" prefHeight="60.0" prefWidth="200.0" styleClass="danger" text="Sterge intrare">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="editBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonEditareNomenclatorProduse" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Editeaza intrare">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="adaugaBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#addNewProdus" prefHeight="60.0" prefWidth="200.0" styleClass="success" text="Adauga intrare">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="80.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="backBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonBackToMain" prefHeight="60.0" prefWidth="200.0" styleClass="primary" text="Meniu principal">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

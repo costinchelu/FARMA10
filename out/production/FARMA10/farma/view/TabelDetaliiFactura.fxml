@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1400.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.TabelDetaliiFacturaController">
+   <children>
+      <VBox layoutX="412.0" layoutY="200.0" prefHeight="800.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="111.0" prefWidth="1400.0" styleClass="titleHBox">
+               <children>
+                  <Label styleClass="titleLabel" text="Detalii factura">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="190.0" prefWidth="1360.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="tipFacturaLB" alignment="TOP_LEFT" prefHeight="219.0" prefWidth="397.0" text="Tip factura" textFill="#002bff">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="detaliiClientLB" alignment="TOP_LEFT" prefHeight="190.0" prefWidth="540.0" text="DetaliiClient" textFill="#018601">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="detaliiContabLB" alignment="TOP_LEFT" layoutX="272.0" layoutY="10.0" prefHeight="190.0" prefWidth="380.0" text="DetaliiContabile" textFill="#c60526">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="tabProduseTV" prefHeight="232.0" prefWidth="1360.0">
+              <columns>
+                <TableColumn fx:id="denumireTC" prefWidth="295.0" text="DenumireProdus" />
+                <TableColumn fx:id="cantitateTC" minWidth="0.0" prefWidth="65.0" text="Cantitate" />
+                  <TableColumn fx:id="lotTC" prefWidth="145.0" text="Lot" />
+                  <TableColumn fx:id="bbdTC" prefWidth="150.0" text="Termen de valabilitate" />
+                  <TableColumn fx:id="procTvatc" text="Procent TVA" />
+                  <TableColumn fx:id="pretTC" prefWidth="93.0" text="Pret unitar" />
+                  <TableColumn fx:id="pretVanzareTC" prefWidth="106.0" text="Pret vanzare" />
+                  <TableColumn fx:id="producatorTC" prefWidth="242.0" text="Producator" />
+                  <TableColumn fx:id="concentratieTC" prefWidth="90.0" text="Concentratie" />
+                  <TableColumn fx:id="formaTC" prefWidth="144.0" text="Forma farmaceutica" />
+                  <TableColumn fx:id="dciTC" prefWidth="200.0" text="DCI" />
+                  <TableColumn fx:id="ambalareTC" prefWidth="90.0" text="Ambalare" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button maxHeight="60.0" maxWidth="100.0" minHeight="60.0" minWidth="100.0" mnemonicParsing="false" onAction="#butonIntoarcereInListaFacturi" prefHeight="60.0" prefWidth="100.0" styleClass="primary" text="OK">
+                     <HBox.margin>
+                        <Insets right="60.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

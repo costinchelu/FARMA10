@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.TabelDciController">
+
+    <stylesheets>
+        <URL value="@global.css" />
+    </stylesheets>
+
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="123.0" prefWidth="1400.0" styleClass="titleHBox">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="titluLB" styleClass="titleLabel" text="Nomenclator DCI">
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <TableView fx:id="tabelTBV" onMouseClicked="#dciSelectat" prefHeight="643.0" prefWidth="1360.0">
+              <columns>
+                <TableColumn fx:id="denDciTCL" prefWidth="433.0" text="Denumire Comuna Internationala" />
+                <TableColumn fx:id="grupaAtcTBC" prefWidth="173.0" text="Grupa ATC" />
+                  <TableColumn fx:id="codDciTBC" prefWidth="147.0" text="Cod DCI" />
+                  <TableColumn fx:id="observatiiTBC" prefWidth="595.0" text="Observatii" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="40.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="984.0">
+               <children>
+                  <Label fx:id="msgLB" styleClass="msgLabel" text="Label">
+                     <HBox.margin>
+                        <Insets left="20.0" right="40.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <opaqueInsets>
+                  <Insets left="40.0" right="20.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="110.0" prefWidth="1360.0">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="stergeBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonStergeDciDinNomenclator" prefHeight="60.0" prefWidth="200.0" styleClass="danger" text="Sterge intrare">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="editBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonEditareDciDinNomenclator" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Editeaza intrare">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="adaugaBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#addNewDci" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Adauga intrare">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="60.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="backBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonBackToMain" prefHeight="60.0" prefWidth="200.0" styleClass="primary" text="Meniu principal">
+                     <HBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

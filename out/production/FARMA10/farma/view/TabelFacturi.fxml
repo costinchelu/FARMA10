@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.TabelFacturiController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="378.0" layoutY="45.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="124.0" prefWidth="1400.0" styleClass="titleHBox">
+               <children>
+                  <Label styleClass="titleLabel" text="Centralizator facturi">
+                     <HBox.margin>
+                        <Insets left="60.0" top="20.0" />
+                     </HBox.margin></Label>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <ComboBox fx:id="tipFactCB" prefHeight="37.0" prefWidth="326.0" promptText="Tip factura" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="40.0" />
+               </VBox.margin>
+            </HBox>
+            <TableView fx:id="tabelTV" onMouseClicked="#produsSelectat" prefHeight="582.0" prefWidth="1360.0">
+                <placeholder>
+                    <Label text="Selectati tipul facturii din caseta combo">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                </placeholder>
+              <columns>
+                <TableColumn fx:id="dataEmitereTC" prefWidth="155.0" text="Data emitere" />
+                <TableColumn fx:id="nrDocTC" prefWidth="117.0" text="Numar document" />
+                  <TableColumn fx:id="partenerTC" prefWidth="245.0" text="Partener" />
+                  <TableColumn fx:id="valFactTC" prefWidth="120.0" text="Valoare factura" />
+                  <TableColumn fx:id="nrProduseTC" prefWidth="86.0" text="Nr. produse" />
+                  <TableColumn fx:id="dataOperareTC" prefWidth="132.0" text="Data operare" />
+                  <TableColumn fx:id="termenTC" prefWidth="108.0" text="Termen de plata" />
+                  <TableColumn fx:id="operatorTC" prefWidth="178.0" text="Operator" />
+                  <TableColumn fx:id="obsTC" prefWidth="215.0" text="Observatii" />
+              </columns>
+               <VBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="40.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="36.0" prefWidth="1360.0">
+               <children>
+                  <Label fx:id="msgLB" styleClass="msgLabel">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="88.0" prefWidth="984.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button fx:id="detaliiFacturaBTN" maxHeight="60.0" maxWidth="220.0" minHeight="60.0" minWidth="220.0" mnemonicParsing="false" onAction="#butonDetaliiFactura" prefHeight="60.0" prefWidth="220.0" styleClass="success" text="Detalii factura">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="90.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="graficClientiBTN" layoutX="424.0" layoutY="37.0" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonGraficClienti" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Raport clienti">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="graficFurnizoriBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonGraficFurnizori" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Raport furnizori">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="40.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="graficOpBTN" maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonGraficOperatii" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Raport operatii">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="80.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonBackToMain" prefHeight="60.0" prefWidth="200.0" styleClass="primary" text="Meniu principal">
+                     <HBox.margin>
+                        <Insets bottom="20.0" right="40.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

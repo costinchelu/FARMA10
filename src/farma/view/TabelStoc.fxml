@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="1400.0" stylesheets="@global.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="farma.view.TabelStocController">
+   <children>
+      <VBox alignment="TOP_CENTER" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="115.0" prefWidth="1400.0" styleClass="titleHBox">
+               <children>
+                  <Label styleClass="titleLabel" text="Stoc curent">
+                     <HBox.margin>
+                        <Insets left="60.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <TableView fx:id="tabelStocTV" prefHeight="655.0" prefWidth="1360.0">
+                <placeholder>
+                    <Label text="Nu sunt produse in stoc" />
+                </placeholder>
+              <columns>
+                <TableColumn fx:id="denProdTC" prefWidth="285.0" text="Denumire produs" />
+                <TableColumn fx:id="concentratieTC" prefWidth="88.0" text="Concentratie" />
+                  <TableColumn fx:id="cantitateTC" prefWidth="64.0" text="Cantitate" />
+                  <TableColumn fx:id="pretTC" prefWidth="79.0" text="Pret vanzare" />
+                  <TableColumn fx:id="lotTC" prefWidth="136.0" text="Lot" />
+                  <TableColumn fx:id="bbdTC" prefWidth="120.0" text="Data expirarii" />
+                  <TableColumn fx:id="furnizorTC" prefWidth="145.0" text="Furnizor" />
+                  <TableColumn fx:id="nrFacturaTC" prefWidth="107.0" text="Nr. factura" />
+                  <TableColumn fx:id="dataEmitereTC" prefWidth="132.0" text="Data document" />
+                  <TableColumn fx:id="adaosTC" prefWidth="114.0" text="Adaos procentual" />
+                  <TableColumn fx:id="tvaTC" prefWidth="76.0" text="Procent TVA" />
+                  <TableColumn fx:id="codBareTC" prefWidth="151.0" text="Cod bare" />
+                  <TableColumn fx:id="producatorTC" minWidth="0.0" prefWidth="0.0" text="Producator" />
+                  <TableColumn fx:id="dciTC" prefWidth="103.0" text="DCI" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="40.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="32.0" prefWidth="1360.0">
+               <children>
+                  <Label fx:id="msgLB" styleClass="msgLabel" />
+               </children>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="108.0" prefWidth="1360.0">
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" />
+               </VBox.margin>
+               <children>
+                  <Button maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#printStocToPdf" prefHeight="60.0" prefWidth="200.0" styleClass="info" text="Tipareste stoc">
+                     <HBox.margin>
+                        <Insets bottom="30.0" right="80.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button maxHeight="60.0" maxWidth="200.0" minHeight="60.0" minWidth="200.0" mnemonicParsing="false" onAction="#butonBackToMain" prefHeight="60.0" prefWidth="200.0" styleClass="primary" text="Meniu principal">
+                     <HBox.margin>
+                        <Insets bottom="30.0" left="20.0" right="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
